@@ -1,5 +1,0 @@
-"""Mathematical constants"""
-
-DEG2RAD = 0.017453293
-LINEAR_THRESHOLD = 0.9995
-ERROR_TOLERANCE = 1e-7
