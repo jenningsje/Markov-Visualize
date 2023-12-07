@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ChemDoodle Web Components Example</title>
+    <!-- Linking ChemDoodle Web Components CSS -->
+    <link rel="stylesheet" href="/install/ChemDoodleWeb.css" type="text/css">
+    <script type="text/javascript" src="/install/ChemDoodleWeb.js"></script>
+</head>
+<body>
+    <div>
+        <li>We give thanks to the teams at the following open source project below without which this would not have been possible</li>
+        <li>https://web.chemdoodle.com/ for the the 3d visualization tool: https://github.com/jenningsje/Markov-Visualize</li>
+        <li>https://lightdock.org/ for the protein protein docking software: https://github.com/jenningsje/lightdock</li>
+        <li>https://www.freedomgpt.com/ for the LLM: https://github.com/jenningsje/Markov-Bot</li>
+        <li>https://www.chatbotui.com/ for the LLM Front End: https://github.com/jenningsje/Markov-UI</li>
+        <li>The following projects are open to the general public under the GPL-3 License.</li>
+        <li>Thank You.</li>
+        <link rel="stylesheet" href="/install/ChemDoodleWeb.css" type="text/css">
+        <script type="text/javascript" src="/install/ChemDoodleWeb.js"></script>
+            var app = new ChemDoodle.TransformCanvas3D('transformBallAndStick', 500, 500);
+            app.styles.set3DRepresentation('Stick');
+            app.styles.backgroundColor = 'white';
+            var molFile = '\n  Marvin  02080816422D          \n\n 14 15  0  0  0  0            999 V2000\n   -0.7145   -0.4125    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.7145    0.4125    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7145   -0.4125    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7145    0.4125    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000   -0.8250    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000    0.8250    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.4992    0.6674    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0\n    1.4992   -0.6675    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0\n    1.9841    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4289   -0.8250    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0001    1.6500    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0001   -1.6500    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.7541    1.4520    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4289    0.8250    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n 10  1  2  0  0  0  0\n  1  2  1  0  0  0  0\n 14  2  1  0  0  0  0\n  8  3  1  0  0  0  0\n  4  3  2  0  0  0  0\n  7  4  1  0  0  0  0\n  1  5  1  0  0  0  0\n  5  3  1  0  0  0  0\n 12  5  1  0  0  0  0\n  6  2  1  0  0  0  0\n  6  4  1  0  0  0  0\n 11  6  2  0  0  0  0\n  9  7  1  0  0  0  0\n 13  7  1  0  0  0  0\n  9  8  2  0  0  0  0\nM  END\n';
+            var molecule = ChemDoodle.readMOL(molFile, 1);
+            app.loadMolecule(molecule);
+        </script>
+    </div>
+</body>
+</html>
